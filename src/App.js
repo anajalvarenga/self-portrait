@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Header';
 import Portrait from './Portrait';
 import Menu from './Menu';
+import PortraitFeatures from './PortraitFeatures';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Portrait />
       <Menu />
+      <PortraitFeatures />
     </main>
   );
 }
