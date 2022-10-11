@@ -1,0 +1,41 @@
+.menu-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item {
+    background-color: #a7c0cd;
+    padding: 8px;
+    border: 3px solid #4b636e;
+    border-left: none;
+    cursor: pointer;
+}
+
+.menu-item:first-of-type {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border-left: 3px solid #4b636e;
+}
+
+.menu-item:last-of-type {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.menu-item:hover {
+    background-color: #78909c;
+}
+
+.menu-item:active {
+    background-color: #4b636e;
+}
+
+.menu-item img {
+    height: 60px;
+}
+
+.active {
+    background-color: #4b636e;
+}
