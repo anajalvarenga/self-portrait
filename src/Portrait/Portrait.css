@@ -1,0 +1,18 @@
+section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+section img {
+    position: absolute;
+    border: 5px solid #4b636e;
+    border-radius: 5px;
+    padding: 16px;
+}
+
+section img:first-of-type {
+    background-color: #a7c0cd;
+}
