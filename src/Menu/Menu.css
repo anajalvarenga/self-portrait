@@ -36,6 +36,6 @@
     height: 60px;
 }
 
-.active {
-    background-color: #4b636e;
+.menu-item.active {
+    background-color: #78909c;
 }

@@ -18,7 +18,7 @@ import eyeCircle from "../images/eye-circle.svg";
 import eyeClosed from "../images/eye-closed.svg";
 import eyeOneClosed from "../images/eye-one-closed.svg";
 
-const Portrait = () => {
+const Portrait = (props) => {
     const setFace = (face) => {
         switch (face) {
             case "circle":
@@ -77,10 +77,10 @@ const Portrait = () => {
 
     return (
         <section>
-            {setFace("circle")}
-            {setHair("long")}
-            {setExpression("happy")}
-            {setEye("small")}
+            {setFace(props.face)}
+            {setHair(props.hair)}
+            {setExpression(props.expression)}
+            {setEye(props.eye)}
         </section>
     );
 };
