@@ -19,68 +19,35 @@ import eyeClosed from "../images/eye-closed.svg";
 import eyeOneClosed from "../images/eye-one-closed.svg";
 
 const Portrait = (props) => {
-    const setFace = (face) => {
-        switch (face) {
-            case "circle":
-                return <img src={faceCircle} className='face' alt="face circle" />;
-            case "elipse":
-                return <img src={faceElipse} className='face' alt="face elipse" />;
-            case "pentagon":
-                return <img src={facePentagon} className='face' alt="face pentagon" />;
-            case "rectangle":
-                return <img src={faceRectangle} className='face' alt="face rectangle" />;
-            default:
-                return;
-        }
+    const faces = {
+        circle: <img src={faceCircle} className='face' alt="face circle" />,
+        elipse: <img src={faceElipse} className='face' alt="face elipse" />,
+        pentagon: <img src={facePentagon} className='face' alt="face pentagon" />,
+        rectangle: <img src={faceRectangle} className='face' alt="face rectangle" />,
     };
-    
-    const setHair = (hair) => {
-        switch (hair) {
-            case "long":
-                return <img src={hairLong} className='hair' alt="hair long" />;
-            case "short":
-                return <img src={hairShort} className='hair' alt="hair short" />;
-            default:
-                return;
-        }
+    const hairs = {
+        long: <img src={hairLong} className='hair' alt="hair long" />,
+        short: <img src={hairShort} className='hair' alt="hair short" />,
     };
-
-    const setExpression = (expression) => {
-        switch (expression) {
-            case "happy":
-                return <img src={expressionHappy} className="expression" alt="expression happy" />;
-            case "ohh":
-                return <img src={expressionOhh} className="expression" alt="expression ohh" />;
-            case "ok":
-                return <img src={expressionOk} className="expression" alt="expression ok" />;
-            case "sad":
-                return <img src={expressionSad} className="expression" alt="expression sad" />;
-            default:
-                return;
-        }
+    const expressions = {
+        happy: <img src={expressionHappy} className="expression" alt="expression happy" />,
+        ohh: <img src={expressionOhh} className="expression" alt="expression ohh" />,
+        ok: <img src={expressionOk} className="expression" alt="expression ok" />,
+        sad: <img src={expressionSad} className="expression" alt="expression sad" />,
     };
-
-    const setEye = (eye) => {
-        switch (eye) {
-            case "small":
-                return <img src={eyeCircleSmall} className='eye' alt="eye circle small" />;
-            case "circle":
-                return <img src={eyeCircle} className='eye' alt="eye circle" />;
-            case "closed":
-                return <img src={eyeClosed} className='eye' alt="eye closed" />;
-            case "one":
-                return <img src={eyeOneClosed} className='eye' alt="eye one closed" />;
-            default:
-                return;
-        }
+    const eyes = {
+        small: <img src={eyeCircleSmall} className='eye' alt="eye circle small" />,
+        circle: <img src={eyeCircle} className='eye' alt="eye circle" />,
+        closed: <img src={eyeClosed} className='eye' alt="eye closed" />,
+        one: <img src={eyeOneClosed} className='eye' alt="eye one closed" />,
     };
 
     return (
         <section>
-            {setFace(props.face)}
-            {setHair(props.hair)}
-            {setExpression(props.expression)}
-            {setEye(props.eye)}
+            {faces[props.face]}
+            {hairs[props.hair]}
+            {expressions[props.expression]}
+            {eyes[props.eye]}
         </section>
     );
 };
